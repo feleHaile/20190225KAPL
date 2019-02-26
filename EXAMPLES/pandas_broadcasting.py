@@ -30,11 +30,19 @@ print_header("Basic DataFrame:")
 print(df)
 print()
 
+
+
+
 print_header("Triple each column")
 print(df * 3)
 print()
 
 print_header("Multiply column gamma by 1.5")
 df['gamma'] *= 1.5
+print(df)
+print()
+
+print_header("Multiply by strings")
+df['gamma'] *= 'spam'
 print(df)
 print()

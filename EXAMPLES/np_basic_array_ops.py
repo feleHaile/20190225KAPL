@@ -19,10 +19,10 @@ b = np.array (
 print("a")
 print(a)
 print()
-
 print("b")
 print(b)
 print()
+
 
 print("a * 10")
 print(a * 10)
@@ -39,3 +39,7 @@ print()
 s1 = a.sum()
 s2 = b.sum()
 print("sum of a is {0}; sum of b is {1}".format(s1,s2))
+print()
+
+a += 1000
+print(a)

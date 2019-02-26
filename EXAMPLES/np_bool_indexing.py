@@ -17,6 +17,7 @@ print('i (a > 50) =>', i)
 print()
 
 print('a[i] =>', a[i])
+print(a[a > 50])
 print()
 print('a[i].min(), a[i].max() =>', a[i].min(), a[i].max())
 print()

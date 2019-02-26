@@ -7,6 +7,7 @@ Created on Sun Jun  2 09:48:50 2013
 """
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # every hour for 3 days
 hourly = pd.date_range('1/1/2013 00:00:00','1/3/2013 23:59:59', freq='H')

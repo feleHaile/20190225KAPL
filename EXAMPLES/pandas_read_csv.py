@@ -24,9 +24,9 @@ print(airports_df['Code'], "\n")
 print_header("SELECTED COLUMNS WITH FILTERED ROWS")
 columns_wanted = ['Code', '2001 Total', 'Airport']
 sort_col = '2001 Total'
-max_val = 10000000
+max_val = 20000000
 selector = airports_df['2001 Total'] > max_val
-print(airports_df[selector][columns_wanted].sort_values(by=sort_col,ascending=False))
+print(airports_df[selector][columns_wanted])
 
 print_header("COLUMN TOTALS")
 print(airports_df[['2001 Total','2010 Total']].sum(), "\n")
