@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # (c)2014 John Strickler
 #
-from .pres import get_info
+from pres import get_info
 
-print('PRESIDENT 1:')
-for field, value in list(get_info(1).items()):
-    print((field, value))
-print()
+for term_num in 1, 16, 26, 45:
+    print('PRESIDENT {}:'.format(term_num))
+    potus_info = get_info(term_num)
+    for field, value in potus_info.items():
+        print((field, value))
+    print()
 
-print('PRESIDENT 44:')
-for field, value in list(get_info(44).items()):
-    print((field, value))
