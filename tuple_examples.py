@@ -13,7 +13,7 @@ def greet(whom):
 greet(person)
 
 first_name, last_name, product = person
-print(first_name, last_name)
+print(first_name, last_name, '\n')
 
 people = [
     ('Melinda', 'Gates', 'Gates Foundation'),
@@ -26,7 +26,15 @@ people = [
     ('Sergey','Brin', 'Google'),
     ('Larry', 'Page', 'Google'),
     ('Linus', 'Torvalds', 'Linux'),
+    ('John', 'Strickler'),
+    ('Joe', 'Schmoe', 'MyProduct1', 'MyProduct2', 'MyProduct3'),
 ]
 
-
+for first_name, last_name, *products in people:
+    # first_name, last_name, product = people[0]
+    # first_name, last_name, product = people[1]
+    # first_name, last_name, product = people[2]
+    # ...
+    print(first_name, last_name, products)
+print()
 
