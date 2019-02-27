@@ -11,7 +11,7 @@ date_fmt = '%Y-%m-%d'
 
 test1 = '''
 for date_string in date_strings:
-    t = datetime.strptime(date_string, date_fmt).date()
+    t = datetime.strptime(date_string, date_fmt)
 '''
 
 test2 = '''
@@ -21,8 +21,8 @@ for date_string in date_strings:
 '''
 
 timer1 = timeit.Timer(test1, setup)
-print("test 1:", timer1.timeit())
+print("test 1:", timer1.timeit(100000))
 
 timer2 = timeit.Timer(test2, setup)
-print("test 2:", timer2.timeit())
+print("test 2:", timer2.timeit(100000))
 

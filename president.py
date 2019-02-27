@@ -18,7 +18,7 @@ class President():
 
 
     def _get_data(self,index):
-        with open("../DATA/presidents.txt") as pfile:
+        with open("DATA/presidents.txt") as pfile:
             for line in pfile:
                 flds = line.split(":")
                 if int(flds[0]) == int(index):
@@ -75,3 +75,6 @@ class President():
     def party(self):
         return self._party
 
+if __name__ == '__main__':
+    p = President(10)
+    print(p.last_name, p.term_end_date)
