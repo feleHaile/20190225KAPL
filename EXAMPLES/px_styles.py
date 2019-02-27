@@ -5,7 +5,7 @@ import openpyxl as px
 def main():
     """program entry point"""
     wb = px.load_workbook('../DATA/presidents.xlsx')
-    ws = wb.get_sheet_by_name('US Presidents')
+    ws = wb['US Presidents']
 
     update_last_names(ws)
 
@@ -16,7 +16,8 @@ def update_last_names(ws):
     for row in ws['B2:B45']:
         cell = row[0]
         cell.value = cell.value.upper()
-        cell.font = px.styles.Font(color='FF0000FF')
+        cell.font = px.styles.Font(color='FF0000FF', bold=True,
+                                   italic=True, size=15)
 
 if __name__ == '__main__':
     main()

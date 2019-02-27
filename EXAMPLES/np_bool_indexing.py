@@ -17,14 +17,16 @@ print('i (a > 50) =>', i)
 print()
 
 print('a[i] =>', a[i])
-print(a[a > 50])
+print('a[a > 50]', a[a > 50])
 print()
 print('a[i].min(), a[i].max() =>', a[i].min(), a[i].max())
 print()
+
+
 a2 = np.copy(a)
 a2[i] = 0
 print('a2 =>', a2)
 print()
 
-a[a < 15] += 10
+a[a2 < 15] += 10
 print(a)

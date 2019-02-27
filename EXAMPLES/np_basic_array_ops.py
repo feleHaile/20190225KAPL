@@ -43,3 +43,16 @@ print()
 
 a += 1000
 print(a)
+
+def shave(x):
+    return x * .9
+
+s = shave(a)
+
+print(s)
+
+
+
+
+
+

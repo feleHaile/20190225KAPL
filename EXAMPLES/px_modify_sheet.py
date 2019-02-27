@@ -6,7 +6,7 @@ import openpyxl as px
 def main():
     """program entry point"""
     wb = px.load_workbook('../DATA/presidents.xlsx')
-    ws = wb.get_sheet_by_name('US Presidents')
+    ws = wb['US Presidents']
 
     add_age_at_inauguration(ws)
 
@@ -24,7 +24,7 @@ def add_age_at_inauguration(ws):
     new_col = ws.max_column + 1
     print(new_col)
     ws.cell(row=1, column=new_col).value = 'Age at Inauguration'
-    for row in range(2,46):
+    for row in range(2,47):
         birth_date = make_date(ws.cell(row=row, column=4).value)  # treat date as string
         inaugural_date = make_date(ws.cell(row=row, column=8).value)
         raw_age_took_office = inaugural_date - birth_date

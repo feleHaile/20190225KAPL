@@ -23,3 +23,8 @@ a_empty = np.empty([3,8])
 print(a_empty)
 
 print(a.dtype)
+
+a_ones[:] = np.NaN
+
+print(a_ones)
+
