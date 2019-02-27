@@ -6,9 +6,9 @@ from struct import Struct
 s = Struct('=HIHHI')  # <1>
 
 with open('../DATA/chimp.bmp', 'rb') as CHIMP:
-    chimp_bmp = CHIMP.read(14)  # <2>
+    chimp_bmp = CHIMP.read(s.size)  # <2>
 
-(signature, size, reserved1, reserved2, offset) = s.unpack(chimp_bmp)  # <3>
+signature, size, reserved1, reserved2, offset = s.unpack(chimp_bmp)  # <3>
 
 print("signature:", signature)  # <4>
 print('size:', size)

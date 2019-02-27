@@ -1,8 +1,14 @@
 #!/usr/bin/env python
+"""
+Provide CardDeck class for playing card games
+"""
 import random
 
 
 class CardDeck():
+    """
+    Represent one deck of standard playing cards
+    """
     SUITS = 'Clubs Diamonds Hearts Spades'.split()
     RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
 
@@ -12,6 +18,10 @@ class CardDeck():
         self._create_deck()
 
     def _create_deck(self):
+        """
+        Initialize the deck.
+
+        """
         self._cards = []
         for suit in self.SUITS:
             for rank in self.RANKS:
@@ -19,9 +29,19 @@ class CardDeck():
                 self._cards.append(card)
 
     def shuffle(self):
+        """
+        Randomize the cards in place
+        """
         random.shuffle(self._cards)
 
     def draw(self):
+        """
+        Remove one card from deck and return it
+
+        :return: One card as a tuple
+        """
+        if len(self) == 0:
+            raise ValueError("No more cards")
         return self._cards.pop()
 
     @property
@@ -74,8 +94,8 @@ class CardDeck():
     #    foo.dealer        property function
 
 if __name__ == '__main__':
-    d1 = CardDeck("Joe")
-    d2 = CardDeck("Mary")
-    d3 = CardDeck("Priscilla")
-    print(d1.get_suits())
+    D1 = CardDeck("Joe")
+    D2 = CardDeck("Mary")
+    D3 = CardDeck("Priscilla")
+    print(D1.get_suits())
 

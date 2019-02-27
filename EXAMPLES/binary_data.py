@@ -4,7 +4,7 @@ from struct import Struct
 
 values = 7, 6, 42.3, b'Guido' # <1>
 
-demo = Struct('iif10s')  # <2>
+demo = Struct('2if10s')  # <2>
 
 print("Size of data: {} bytes".format(demo.size)) # <3>
 
