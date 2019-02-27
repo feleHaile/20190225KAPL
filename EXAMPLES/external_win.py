@@ -8,13 +8,13 @@ if sys.platform != 'win32':
     sys.exit(1)
 
 # just launch a command
-os.system('ipconfig')
-
+return_code = os.system('ipconfig')
+print(return_code)
 # open a command and read its output
-d = os.popen(r'dir ..\DATA')
+with os.popen(r'dir ..\DATA') as d:
 
-for entry in d:
-    print(entry, end=' ')
+    for entry in d:
+        print(entry, end=' ')
 
 # backticks (``)  equiv
 hostname = os.popen('hostname').read()[:-1]
