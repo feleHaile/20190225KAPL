@@ -4,4 +4,4 @@ city = 'Albany'
 state = 'NY'
 
 def bark():
-    print("Woof! woof!")
+    print("Woof! woof!  ")
