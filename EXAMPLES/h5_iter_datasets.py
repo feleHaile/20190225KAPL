@@ -15,13 +15,13 @@ for i, row in enumerate(dset):
     print("ROW {}: {}".format(i, row))
 print()
 
-print("Row 1:")
-print(dset[1])
+print("Row index 1 (second row):")
+print(dset[1]) # second row
 print()
 
 
-print("Column 1:")
-print(dset[:,1])
+print("Column index 1 (second column):")
+print(dset[:,1:4])
 print()
 
 print("Rows 3 & 4, Columns 5 & 6")

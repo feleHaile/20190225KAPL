@@ -10,4 +10,3 @@ with h5py.File(H5_FILE) as hfile:
     ds2 = hfile.create_dataset(
         '/Animals/bushbaby', (15, 2), dtype='i8'
     )
-
