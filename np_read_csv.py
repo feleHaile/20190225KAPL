@@ -2,11 +2,13 @@
 import numpy as np
 
 a = np.loadtxt(
-    '../DATA/columns_of_numbers.text',
-    usecols=[2, 3],
+    'DATA/columns_of_numbers.txt',
+    # usecols=[2, 3],
     skiprows=1,
+    dtype=np.int32
 )
 
 print(a)
 print(a.shape)
 print(a.size)
+
