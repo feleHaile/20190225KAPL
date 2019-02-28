@@ -32,4 +32,14 @@ print_header('DataFrame df'),
 print(df, '\n')
 
 print_header("df['gamma']")
-print(df['gamma'])
+print(df.loc['gamma':'epsilon'])
+
+df['sum_de'] = df['delta'] + df['epsilon']
+df['sum_de'] = df['delta'] + df['epsilon']
+
+df.columns = ['spam', 'spam', 'spam', 'spam', 'spam', 'spam', ]
+
+print(df, '\n')
+
+print(df['spam'] + df['spam'])
+

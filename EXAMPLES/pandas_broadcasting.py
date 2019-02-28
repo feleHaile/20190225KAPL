@@ -42,7 +42,9 @@ df['gamma'] *= 1.5
 print(df)
 print()
 
-print_header("Multiply by strings")
-df['gamma'] *= 'spam'
-print(df)
-print()
+# print_header("Multiply by strings")
+# df['gamma'] *= 'spam'
+# print(df)
+# print()
+
+print(df['gamma'].mean())

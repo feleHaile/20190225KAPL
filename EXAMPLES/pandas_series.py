@@ -6,7 +6,7 @@ Created on Sat May 18 10:46:25 2013
 
 """
 import numpy as np
-from pandas.core.frame import Series
+from pandas import Series
 
 NUM_VALUES = 10
 index = [chr(i) for i in range(97,97 + NUM_VALUES)]
@@ -17,6 +17,8 @@ s2 = Series(np.linspace(1,5,NUM_VALUES))
 
 print(s1, "\n")
 print(s2, "\n")
+
+print(s1['f'])
 
 print(s1[['h','b']], "\n")
 
@@ -39,6 +41,6 @@ s4 = Series([-0.204708, 0.478943, -0.519439])
 print(s4.max(), s4.min(), s4.max() - s4.min())
 
 
-from pandas.core.frame import Series
+from pandas import Series
 s = Series([5,10,15], ['a','b','c'])
 print(s)

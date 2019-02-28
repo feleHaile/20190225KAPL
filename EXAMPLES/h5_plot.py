@@ -3,7 +3,7 @@
 #
 import h5py
 import matplotlib
-matplotlib.use('Qt5Agg')
+# matplotlib.use('Qt5Agg')
 import matplotlib.pyplot as plt
 
 DATA_FILE = '../DATA/h5/TSX_SM_053_0008_20111223-20121026_0308_00063.h5'

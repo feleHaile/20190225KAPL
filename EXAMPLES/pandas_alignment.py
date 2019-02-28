@@ -38,3 +38,12 @@ print(df1 + df2)
 
 print_header('df1.add(df2, fill_value=0)')
 print(df1.add(df2, fill_value=0))
+
+x = df1 + df2
+
+print(type(x.loc['brown','mango']))
+
+if np.isnan(x.loc['brown','mango']):
+    print("it is NaN but not naan")
+
+

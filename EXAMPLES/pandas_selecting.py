@@ -40,5 +40,12 @@ print_header("df[['alpha','epsilon','beta']]")
 print(df[['alpha','epsilon','beta']])
 print()
 
+print(df['b':'b'], '\n')
 
+
+print(df.tail(3))
+print(df.shape)
+print(df.values, type(df.values))
+
+print(df.describe())
 
